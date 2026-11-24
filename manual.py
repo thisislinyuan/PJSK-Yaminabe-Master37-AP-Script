@@ -27,13 +27,15 @@
 import argparse
 import json
 import subprocess
+import os
 import sys
 import time
 
 sys.path.insert(0, '.')
 from executor import build_events
 
-ADB = r'C:\Users\86189\WorkBuddy\2026-11-14-01-23-55\tools\platform-tools\adb.exe'
+ADB = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                 'tools', 'platform-tools', 'adb.exe')
 DEX = '/data/local/tmp/injector.dex'
 CLS = 'Injector'
 
